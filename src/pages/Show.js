@@ -1,5 +1,15 @@
-function Component(props) {
-  return <h1>Component Name</h1>;
+import { useLoaderData } from "react-router-dom";
+
+function Show(props) {
+  const oneCheeseLoader = useLoaderData();
+
+  return (
+    <div className="oneCheese">
+      <h1>{oneCheeseLoader.name}</h1>
+      <img src={oneCheeseLoader.image} alt={oneCheeseLoader.name} />
+      <h2>{oneCheeseLoader.countryOfOrigin}</h2>
+    </div>
+  );
 }
 
-export default Component;
+export default Show;

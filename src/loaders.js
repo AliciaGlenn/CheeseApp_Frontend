@@ -5,3 +5,9 @@ export const cheeseLoader = async () => {
   const cheese = await response.json();
   return cheese;
 };
+
+export const oneCheeseLoader = async ({ params }) => {
+  const response = await fetch(URL + "/cheese/" + params.id);
+  const cheese = await response.json();
+  return cheese;
+};
