@@ -5,13 +5,13 @@ const URL = "http://localhost:4000";
 export const createAction = async ({ request }) => {
   // get data from form
   const formData = await request.formData();
-  // set up our new person to match schema
+  // set up our new Cheese to match schema
   const newCheese = {
     name: formData.get("name"),
     image: formData.get("image"),
     countryOfOrigin: formData.get("countryOfOrigin"),
   };
-  // Send new person to our API
+  // Send new cheese to our API
   await fetch(URL + "/cheese", {
     method: "post",
     headers: {
