@@ -26,6 +26,10 @@ function Show(props) {
         <input type="input" name="countryOfOrigin" placeholder="Country" />
         <input type="submit" value={`update ${oneCheeseLoader.name}`} />
       </Form>
+      <h2>Delete Cheese</h2>
+      <Form action={`/delete/${oneCheeseLoader._id}`} method="post">
+        <input type="submit" value={`delete ${oneCheeseLoader.name}`} />
+      </Form>
     </div>
   );
 }
