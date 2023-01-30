@@ -1,6 +1,6 @@
 import { redirect } from "react-router-dom";
 
-const URL = "http://localhost:4000";
+const URL = "https://cheeseapp-backend-u8y7.onrender.com";
 
 export const createAction = async ({ request }) => {
   // get data from form
